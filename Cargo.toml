@@ -1,0 +1,18 @@
+[package]
+name = "auto_db_mapping"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+path = "src/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+heck = { version = "0.4.0", features = ["unicode"] }
+proc-macro2 = "1.0.47"
+quote = "1.0.21"
+sqlx = { version = "0.6.2", features = ["runtime-tokio-rustls", "postgres", "macros", "chrono", "decimal", "json"] }
+syn = { version = "1.0.103", features = ["full"] }
+
